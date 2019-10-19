@@ -12,9 +12,9 @@ const svg = d3.select("svg"),
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
 d3.json("fake_data.json").then(data => {
-  data = data.county;
+  data = data;
 
-  x.domain(data.map(d => d.genre));
+  x.domain(data.map(d => d.county));
   y.domain([0, d3.max(data, d => d.year)]);
 
   g.append("g")
