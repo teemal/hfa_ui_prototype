@@ -1,6 +1,6 @@
 var data = [30, 86, 168, 281, 303, 365];
 
-d3.select(".chart")
+d3.select(".example_graph")
   .selectAll("div")
   .data(data)
   .enter()
