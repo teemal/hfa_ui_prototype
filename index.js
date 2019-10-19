@@ -5,12 +5,13 @@ d3.select(".example_graph")
   .data(data)
   .enter()
   .append("div")
-  .style("width", function(d) {
-    return d + "px";
-  })
+//   .style("width", function(d) {
+//     return d + "px";
+//   })
+.style(width = 500, height = 500)
   .text(function(d) {
     return d;
   },
-  console.log("FUCK fuck FUCK")
+//   console.log("FUCK fuck FUCK")
   );
 
