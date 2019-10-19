@@ -24,7 +24,13 @@ var svg = d3.select('svg')
 
 
 // var dataset = [80, 100, 56, 120, 180, 30, 40, 120, 160];
-var dataset = d3.json("fake_data.json", function(data) {
+d3.json("fake_data.json", function(error, data) {
+    data.forEach(function(d) {
+        d.county = d.county;
+        d.county.year = d.county.crook.year;
+    });
+    console.log(error)
+
     console.log(data);
     console.log(data.county);
     console.log(data.county.crook);
