@@ -23,14 +23,17 @@ var svg = d3.select('svg')
     .attr("class", "bar-chart");
 
 
-var dataset = [80, 100, 56, 120, 180, 30, 40, 120, 160];
+// var dataset = [80, 100, 56, 120, 180, 30, 40, 120, 160];
+var dataset = d3.json("fake_data.json", function(data) {
+    console.log(data);
+});
 
 var barPadding = 5;
 var barWidth = svgWidth / dataset.length;
 
 var barChart = svg
   .selectAll("rect")
-  .data(d3.json("fake_data.json"))
+  .data(dataset)
   .enter()
   .append("rect")
   .attr("y", function(d) {
