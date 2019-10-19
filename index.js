@@ -11,3 +11,5 @@ d3.select(".example_graph")
   .text(function(d) {
     return d;
   });
+
+  console.log("FUCK FUCK FUCK")
