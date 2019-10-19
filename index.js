@@ -25,9 +25,9 @@ var svg = d3.select('svg')
 
 // var dataset = [80, 100, 56, 120, 180, 30, 40, 120, 160];
 var dataset = d3.json("fake_data.json", function(data) {
-    console.log(data[0]);
-    console.log(data[0][0]);
-    console.log(data[0][0][0]);
+    console.log(data);
+    console.log(data.county);
+    console.log(data.county.year);
 });
 
 var barPadding = 5;
