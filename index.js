@@ -27,7 +27,7 @@ var svg = d3.select('svg')
 var dataset = d3.json("fake_data.json", function(data) {
     console.log(data[0]);
     console.log(data[0][0]);
-    console.log(data[0])[0][0];
+    console.log(data[0][0][0]);
 });
 
 var barPadding = 5;
